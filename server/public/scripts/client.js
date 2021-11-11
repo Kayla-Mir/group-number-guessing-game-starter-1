@@ -4,6 +4,7 @@ function handleReady() {
   console.log("jquery is loaded!")
   renderGuessHistory();
   $('#add-guesses-button').on('click', handleSubmitClick);
+  generateNumber();
 }
 
 function handleSubmitClick() {
@@ -43,3 +44,17 @@ function renderGuessHistory() {
     console.log('error', error);
   });
 }
+
+
+function generateNumber() {
+  $.ajax({
+    method: 'GET',
+    url: '/randomNumber'
+  }).then((response) => {
+    console.log('response', response);
+    // CHANGE LATER WHEN TABLE IS DONE
+  }).catch((error) => {
+    console.log('error', error);
+  });
+}
+

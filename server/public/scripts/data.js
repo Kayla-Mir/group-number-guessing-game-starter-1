@@ -8,10 +8,3 @@ let numberGuesses = [{
 
 module.exports = numberGuesses;
 
-let randomNumber = [];
-
-function randomNumberGenerator(min, max) {
-    min = 1;
-    max = 25;
-    randomNumber.push(Math.floor(Math.random() * (1 + max - min) + min));
-}

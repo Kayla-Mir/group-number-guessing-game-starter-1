@@ -26,3 +26,15 @@ app.post('/guessingGame', (req, res) => {
 app.listen(PORT, () => {
   console.log ('Server is running on port', PORT)
 });
+
+
+function randomNumberGenerator() {
+  return `${Math.floor(Math.random() * (1 + 25 - 1) + 1)}`;
+  
+}
+
+app.get('/randomNumber', (req, res) => {
+  console.log('in GET /randomNumber');
+  res.send(randomNumberGenerator());
+});
+
