@@ -12,24 +12,39 @@
 </head>
 <body>
   
-    <h1>Number Guessing Game</h1>
+    <h1>Your Game Here:</h1>
+    <h2> </h2>
     <div class="inputs">
     <input id="adam-input" type="number" placeholder="Adam">
     <input id="duncan-input" type="number" placeholder="Duncan">
     <input id="kayla-input" type="number" placeholder="Kayla">
     <input id="selam-input" type="number" placeholder="Selam">
     </div>
-    <div id="submit-btn">
-      <button id="add-guesses-button">Submit</button>
+    <table>
+      <tr>
+        <th>Adam</th>
+        <th>Duncan</th>
+        <th>Kayla</th>
+        <th>Selam</th>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>2</td>
+        <td>7</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td>9</td>
+        <td>2</td>
+        <td>5</td>
+      </tr>
+    </table>
+    <button id=“add-guesses-button”>Submit</button>
+    <div id=“history”>
+      <ul id=“guess-list”></ul>
     </div>
-    <h2>Rounds played:</h2>
-
-      <div id="history">
-        <ul id="guess-list"></ul>
-      </div>
-      <div id="winner">
-        <h3>WINNER!!</h3>
-        <button>Restart Game</button>
-      </div>
+    <div id=“winner”>WINNER</div>
+    <button id=“restart-button”>Restart</button>
 </body>
 </html>

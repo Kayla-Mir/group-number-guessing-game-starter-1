@@ -1,4 +1,4 @@
-h1 {
+/* h1 {
     text-align: center;
 }
 
@@ -48,4 +48,50 @@ h3 {
 
 #history-winner {
     text-align: center;
+} */
+
+body {
+    background-color: darkseagreen;
 }
+h1 {
+ font-family: ‘Droid Serif’, Georgia, Times, serif;
+ font-size: 49px;
+ line-height: 65px;
+ align-items: center;
+}
+p {
+ font-family: ‘Droid Sans’, Helvetica, Arial, sans-serif;
+ font-size: 14px;
+ line-height: 25px;
+}
+.inputs {
+    border-radius: 5px solid black;
+    text-align: left;
+}
+table {
+    width: 625px;
+    border-spacing: 10px;
+}
+th {
+    text-align: left;
+}
+table, th, td {
+        border:1px solid black;
+}
+#results {
+    display: inline-block;
+}
+#winner {
+    display: inline-block;
+}
+#history {
+    display: inline-block;
+}
+#restart-button {
+    background-color: red;
+    display: block;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+
