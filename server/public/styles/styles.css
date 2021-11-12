@@ -68,10 +68,10 @@ p {
     border-radius: 5px solid black;
     text-align: left;
 }
-table {
+table, tr, td {
     width: 625px;
     border-spacing: 10px;
-}
+} 
 th {
     text-align: left;
 }

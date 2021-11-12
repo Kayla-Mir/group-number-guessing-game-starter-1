@@ -40,7 +40,12 @@ function renderGuessHistory() {
     for (let guess of response) {
       //testAdamGuesses();
       $('#guess-list').append(`
-        <li>${guess.adam} ${guess.duncan} ${guess.kayla} ${guess.selam}</li>
+        <tr>
+          <td>${guess.adam}</td> 
+          <td>${guess.duncan}</td> 
+          <td>${guess.kayla}</td> 
+          <td>${guess.selam}</td>
+        </tr>
       `)
       console.log(guess.adamResult);
     }
