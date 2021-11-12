@@ -6,5 +6,5 @@ let numberGuesses = [{
 }];
 // CLEAR THIS OUT LATER
 
-module.exports = numberGuesses;
+
 

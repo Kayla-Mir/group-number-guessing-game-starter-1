@@ -4,6 +4,7 @@ function handleReady() {
   console.log("jquery is loaded!")
   renderGuessHistory();
   $('#add-guesses-button').on('click', handleSubmitClick);
+  $('#restart-button').on('click', restartButton);
   generateNumber();
 }
 
@@ -20,6 +21,7 @@ function handleSubmitClick() {
     data: newGuessRow
   }).then((response) => {
     console.log('YAY it worked');
+    numberGuesses.push(newGuessRow);
     renderGuessHistory();
   }).catch((error) => {
     console.log('it didnt work');
@@ -58,3 +60,16 @@ function generateNumber() {
   });
 }
 
+function restartButton()  {
+  $.ajax({
+    method: 'GET',
+    url: '/guessingGame'
+  }).then((response) => {
+  response = [];
+  generateNumber();
+  renderGuessHistory();
+  console.log('Restarted the game');
+  }).catch((error) => {
+  console.log('error', error);
+});
+}
