@@ -1,24 +1,51 @@
+h1 {
+    text-align: center;
+}
+
+h2 {
+    margin-left: 22vw;
+    padding: 1vh 0vw;
+}
+
 .inputs {
-    display: inline-block;
+    text-align: center;
     border-radius: 5px solid black;
 }
 
-#results {
-    display: inline-block;
+#submit-btn {
+    margin-top: 1vh;
+    text-align: center;
+}
+
+#add-guesses-button {
+    background-color: rgb(143, 143, 143);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 5px 45px;
+    font-size: 16px;
 }
 
 #winner {
+    margin-top: 10vw;
+    min-width: 25vw;
     display: inline-block;
+    position:absolute;
+    border: 0em;
+}
+
+h3 {
+    font-size: xxx-large;
+    color: darkorchid;
 }
 
 #history {
+    margin: 0vw 10vw 0vw 20vw;
+    min-width: 25vw;
     display: inline-block;
+    border: 0em;
 }
 
-#restart-button {
-    background-color: red;
-    display: block;
-    position: fixed;
-    right: 10px;
-    bottom: 10px;
+#history-winner {
+    text-align: center;
 }

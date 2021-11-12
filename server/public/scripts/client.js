@@ -21,8 +21,8 @@ function handleSubmitClick() {
     data: newGuessRow
   }).then((response) => {
     console.log('YAY it worked');
-    numberGuesses.push(newGuessRow);
     renderGuessHistory();
+    clearInputs();
   }).catch((error) => {
     console.log('it didnt work');
   })
@@ -36,11 +36,13 @@ function renderGuessHistory() {
     console.log('response', response);
     // CHANGE LATER WHEN TABLE IS DONE
     $('#guess-list').empty();
-
+    
     for (let guess of response) {
+      //testAdamGuesses();
       $('#guess-list').append(`
         <li>${guess.adam} ${guess.duncan} ${guess.kayla} ${guess.selam}</li>
       `)
+      console.log(guess.adamResult);
     }
   }).catch((error) => {
     console.log('error', error);
@@ -63,13 +65,19 @@ function generateNumber() {
 function restartButton()  {
   $.ajax({
     method: 'GET',
-    url: '/guessingGame'
+    url: '/restartButton'
   }).then((response) => {
-  response = [];
   generateNumber();
   renderGuessHistory();
   console.log('Restarted the game');
   }).catch((error) => {
   console.log('error', error);
 });
+}
+
+function clearInputs() {
+  $('#adam-input').val('');
+  $('#duncan-input').val('');
+  $('#kayla-input').val('');
+  $('#selam-input').val('');
 }
